@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Package, MessageSquare, Star, RotateCcw } from 'lucide-react';
 
 export default function RatingApp() {
   const [productName, setProductName] = useState('');
@@ -13,9 +14,8 @@ export default function RatingApp() {
           <div className="rounded-2xl shadow-xl border border-purple-300 overflow-hidden">
             <div className="p-8 md:p-12">
               <form className="space-y-8">
-                <div
-                className="block text-sm font-semibold text-purple-900 mb-3"
-                >
+                <div className="flex items-center gap-2 text-sm font-semibold text-purple-900 mb-3">
+                    <Package size={16} />
                     Product Name
                 </div>
                 <input
@@ -28,9 +28,8 @@ export default function RatingApp() {
                                 focus:outline-none focus:ring-2 focus:ring-purple-300
                                 transition-all duration-200 placeholder:text-slate-400"
                 />
-                <div 
-                    className="block text-sm font-semibold text-purple-900 mb-3"
-                >
+                <div className="flex items-center gap-2 text-sm font-semibold text-purple-900 mb-3">
+                    <MessageSquare size={16} />
                     Product Description & Review
                 </div>
                 <textarea
@@ -48,8 +47,9 @@ export default function RatingApp() {
                     type="button"
                     className="flex-1 bg-gradient-to-r text-purple-600 bg-slate-50 font-semibold 
                              py-4 px-8 rounded-xl transform hover:scale-105 transition-all duration-200 shadow-lg 
-                             hover:shadow-xl"
+                             hover:shadow-xl flex items-center justify-center gap-2"
                   >
+                    <Star size={18} />
                     Submit Rating
                   </button>
                   <button
@@ -59,8 +59,9 @@ export default function RatingApp() {
                       setProductDescription('');
                     }}
                     className="flex-1 sm:flex-none bg-slate-50 text-purple-400 font-semibold 
-                             py-4 px-8 rounded-xl hover:bg-slate-100"
+                             py-4 px-8 rounded-xl hover:bg-slate-100 flex items-center justify-center gap-2"
                   >
+                    <RotateCcw size={16} />
                     Clear
                   </button>
                 </div>
