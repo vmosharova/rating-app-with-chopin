@@ -7,9 +7,9 @@ export default function RatingApp() {
   const [productDescription, setProductDescription] = useState('');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-100 via-blue to-purple-300">
-      <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="max-w-2xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-r from-teal-100 to-purple-300">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-2xl mx-auto">Leave yout
           <div className="rounded-2xl shadow-xl border border-purple-300 overflow-hidden">
             <div className="p-8 md:p-12">
               <form className="space-y-8">
@@ -46,7 +46,7 @@ export default function RatingApp() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <button
                     type="button"
-                    className="flex-1 bg-gradient-to-r from-teal-300 to-purple-800 text-teal-50 font-semibold 
+                    className="flex-1 bg-gradient-to-r text-purple-600 bg-slate-50 font-semibold 
                              py-4 px-8 rounded-xl transform hover:scale-105 transition-all duration-200 shadow-lg 
                              hover:shadow-xl"
                   >
@@ -58,8 +58,8 @@ export default function RatingApp() {
                       setProductName('');
                       setProductDescription('');
                     }}
-                    className="flex-1 sm:flex-none bg-teal-50 text-purple-500 font-semibold 
-                             py-4 px-8 rounded-xl hover:bg-slate-200"
+                    className="flex-1 sm:flex-none bg-slate-50 text-purple-400 font-semibold 
+                             py-4 px-8 rounded-xl hover:bg-slate-100"
                   >
                     Clear
                   </button>
