@@ -17,17 +17,18 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const address = await validateAndGetAddress();
+    const submissionTimestamp = new Date().toISOString().slice(0, 16);
     const { productName, productDescription } = body; 
+
+    const notarizedResult = (await Oracle.notarize(async () => {
+      const submittedAt = await Oracle.now();
+      return { address, productName, productDescription, submittedAt };
+    }));
 
     return NextResponse.json({
       success: true,
       message: 'Rating submitted successfully',
-      data: {
-        address,
-        productName,
-        productDescription,
-        submittedAt: new Date().toISOString()
-      }
+      data: notarizedResult
     });
 
   } catch (error) {
