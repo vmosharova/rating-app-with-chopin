@@ -39,5 +39,8 @@ This is a decentralized rating application built with Next.js and Chopin framewo
 - Receives wallet address from authenticated requests
 - Integrates Oracle module for non-deterministic data handling
 
+<img src="screenshot-desktop.png" alt="Screenshot - desktop" width="640">
+<img src="screenshot-mobile.png" alt="Screenshot - mobile" width="194">
+
 
 This demo does not implement any actual rollup logic (aggregating multiple data entries into rollup blocks or submitting rollups to Celestia). It simply creates a blockchain-based notarization of each individual request. This project is a part of [Camp Mamo](https://www.encodeclub.com/programmes/camp-mamo), Celestia builder bootcamp.
