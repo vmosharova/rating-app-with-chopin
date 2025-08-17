@@ -12,11 +12,17 @@ export default function Navbar() {
         <div className="flex justify-end items-center h-16">
           <div 
             className={`bg-gradient-to-r from-teal-200 to-purple-500 text-purple-900
-                        font-bold px-20 py-2 rounded-xl hover:bg-slate-200 transition-all 
+                        font-bold py-2 rounded-xl hover:bg-slate-200 transition-all 
+                        px-4 sm:px-8 md:px-16 lg:px-20
                         duration-200 ${! chopinAddress ? "animate-bounce transform hover:scale-110" : ""} flex items-center gap-2`}>
             <Wallet size={18} />
             {chopinAddress ? (
-              <div>Logged in as: {chopinAddress}</div>
+              <>
+              <span className="hidden sm:inline">Logged in as: {chopinAddress}</span>
+              <span className="sm:hidden">
+                Logged is as: {chopinAddress.slice(0, 6)}...{chopinAddress.slice(-4)}
+              </span>
+              </>
             ) : (
               <button onClick={login}>Login</button>
             )} 
