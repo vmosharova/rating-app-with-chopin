@@ -17,7 +17,6 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const address = await validateAndGetAddress();
-    const submissionTimestamp = new Date().toISOString().slice(0, 16);
     const { productName, productDescription } = body; 
 
     const notarizedResult = (await Oracle.notarize(async () => {
